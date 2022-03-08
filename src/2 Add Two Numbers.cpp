@@ -19,16 +19,11 @@ public:
             carry = sum > 9;
             sum = sum % 10;
             if(!head){
-                head = tail = l1;
-                tail->val = sum;
+                head = tail = new ListNode(sum);
             }
             else{
-                if(!tail->next){
-                    if(l2) tail->next = l2;
-                    else tail->next = new ListNode();
-                }
+                tail->next = new ListNode(sum);
                 tail = tail->next;
-                tail->val = sum;
             }
             if(l1) l1 = l1->next;
             if(l2) l2 = l2->next;
