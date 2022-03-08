@@ -1,3 +1,12 @@
+/*
+ * @Author: NeatLii
+ * @Date: 2022-03-08
+ * @LastEditors: NeatLii
+ * @LastEditTime: 2022-03-08
+ * @FilePath: \LeetCode\src\0002 Add Two Numbers.cpp
+ * @Description: 
+ */
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -19,7 +28,7 @@ public:
             carry = sum > 9;
             sum = sum % 10;
             if(!head){
-                head = tail = new ListNode(sum);
+                head = tail = new ListNode(sum);    //直接使用l1或l2的结点会更快，但不安全
             }
             else{
                 tail->next = new ListNode(sum);

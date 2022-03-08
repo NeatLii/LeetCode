@@ -1,3 +1,11 @@
+/*
+ * @Author: NeatLii
+ * @Date: 2022-03-08
+ * @LastEditors: NeatLii
+ * @LastEditTime: 2022-03-08
+ * @FilePath: \LeetCode\src\0003 Longest Substring Without Repeating Characters.cpp
+ * @Description: 
+ */
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
