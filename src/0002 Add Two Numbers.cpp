@@ -1,12 +1,3 @@
-/*
- * @Author: NeatLii
- * @Date: 2022-03-08
- * @LastEditors: NeatLii
- * @LastEditTime: 2022-03-08
- * @FilePath: \LeetCode\src\0002 Add Two Numbers.cpp
- * @Description: 
- */
-
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -18,19 +9,20 @@
  * };
  */
 class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+  public:
+    ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
         ListNode *head = nullptr, *tail = nullptr;
         int sum;
-        bool carry;     //加法进位最多为1
-        while(l1 || l2 || carry){
+        bool carry;    //加法进位最多为1
+        while(l1 || l2 || carry) {
             sum = (l1 ? l1->val : 0) + (l2 ? l2->val : 0) + (carry ? 1 : 0);
             carry = sum > 9;
             sum = sum % 10;
-            if(!head){
-                head = tail = new ListNode(sum);    //直接使用l1或l2的结点会更快，但不安全
+            if(!head) {
+                head = tail = new ListNode(
+                    sum);    //直接使用l1或l2的结点会更快，但不安全
             }
-            else{
+            else {
                 tail->next = new ListNode(sum);
                 tail = tail->next;
             }
