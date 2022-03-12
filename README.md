@@ -1,3 +1,3 @@
 # LeetCode  
 
-My personal Leetcode submissions.
+LeetCode题解存档。
