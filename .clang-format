@@ -1,5 +1,5 @@
 # 官方文档：https://clang.llvm.org/docs/ClangFormatStyleOptions.html
-# clang-format版本：13
+# clang-format版本：14
 
 # 要应用到的语言: None, Cpp, CSharp, Java, JavaScript, ObjC, Proto, TableGen, TextProto
 Language: Cpp
@@ -250,7 +250,7 @@ NamespaceIndentation: None
 PPIndentWidth: -1
 
 # 构造函数初始值列表的格式: Never(各自一行), BinPack(仅在当前行放不下时换行), CurrentLine(若不能全放在当前行，各自一行), NextLine(若不能全放在下一行，各自一行)
-# PackConstructorInitializers: Never # clang-format14
+PackConstructorInitializers: Never
 
 # 指针和引用的对齐: Left, Right, Middle
 PointerAlignment: Right
@@ -262,7 +262,7 @@ ReferenceAlignment: Pointer
 ReflowComments: true
 
 # 类、结构体、函数等代码块之间的空行数: Leave(不更改), Always(总是一行), Never
-# SeparateDefinitionBlocks: Always # clang-format14
+SeparateDefinitionBlocks: Always
 
 # 仅对有大于n个非空行的命名空间尾添加注释, 默认1
 ShortNamespaceLines: 0
