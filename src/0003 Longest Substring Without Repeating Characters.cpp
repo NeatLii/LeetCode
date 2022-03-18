@@ -1,13 +1,16 @@
 class Solution {
   public:
     int lengthOfLongestSubstring(string s) {
-        int last[128];
-        for(int &n: last) n = -1;
-        uint i, start, len = 0;
-        for(i = 0, start = 0; i < s.size(); i++) {
-            start = start > last[s[i]] + 1 ? start : last[s[i]] + 1;
-            len = len > i - start + 1 ? len : i - start + 1;
-            last[s[i]] = i;
+        bool exist[128] = {};
+        int left = 0, right = 0;
+        int len = 0;
+        while (left < s.size()) {
+            while (!exist[s[right]]) {
+                if (right == s.size() - 1) return max(len, right - left + 1);
+                exist[s[right++]] = true;
+            }
+            len = max(len, right - left);
+            while (exist[s[right]]) exist[s[left++]] = false;
         }
         return len;
     }

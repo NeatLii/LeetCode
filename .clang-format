@@ -86,7 +86,7 @@ AccessModifierOffset: -2
 # BitFieldColonSpacing: Both
 
 # 大括号换行, 只有当BreakBeforeBraces设置为Custom时才有效
-# BraceWrapping:
+BraceWrapping:
   # case标签后面
   # AfterCaseLabel: false
   # class后面
@@ -108,7 +108,7 @@ AccessModifierOffset: -2
   # catch之前
   # BeforeCatch: true
   # else之前
-  # BeforeElse: true
+  BeforeElse: true
   # lambda表达式之前
   # BeforeLambdaBody: false
   # do...while的while之前
@@ -126,7 +126,7 @@ AccessModifierOffset: -2
 # BreakBeforeBinaryOperators: All
 
 # 大括号换行: Attach, Linux, Mozilla, Stroustrup, Allman, Whitesmiths, GNU, WebKit, Custom(在BraceWrapping里自定义)
-# BreakBeforeBraces: Custom
+BreakBeforeBraces: Custom
 
 # 在concept声明前换行
 # BreakBeforeConceptDeclarations: true
