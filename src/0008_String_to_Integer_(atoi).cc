@@ -8,7 +8,11 @@ class Solution {
         // in_number    end     end     in_number   end
         // end          end     end     end         end
         int map[4][4] = {
-            {0, 1, 2, 3}, {3, 3, 2, 3}, {3, 3, 2, 3}, {3, 3, 3, 3}};
+            {0, 1, 2, 3},
+            {3, 3, 2, 3},
+            {3, 3, 2, 3},
+            {3, 3, 3, 3}
+        };
         int status = 0;
         bool sign = true;
         long long sum = 0;

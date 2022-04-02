@@ -1,6 +1,6 @@
 class Solution {
   public:
-    int threeSumClosest(vector<int>& nums, int target) {
+    int threeSumClosest(vector<int> &nums, int target) {
         sort(nums.begin(), nums.end());
         int first, second, third;
         int best = 1000000;
@@ -19,8 +19,7 @@ class Solution {
                     --third;
                     while (second < third && nums[third] == nums[third + 1])
                         --third;
-                }
-                else {
+                } else {
                     ++second;
                     while (second < third && nums[second - 1] == nums[second])
                         ++second;

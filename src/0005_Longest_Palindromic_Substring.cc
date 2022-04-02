@@ -22,10 +22,9 @@ class Solution {
             int cur_arm_len;
             if (most_right >= i) {
                 int min_arm_len = min(arm_len[j * 2 - i], most_right - i);
-                cur_arm_len =
-                    expand(s_expand, i - min_arm_len, i + min_arm_len);
-            }
-            else
+                cur_arm_len
+                    = expand(s_expand, i - min_arm_len, i + min_arm_len);
+            } else
                 cur_arm_len = expand(s_expand, i, i);
             arm_len.push_back(cur_arm_len);
             if (i + cur_arm_len > most_right) {
